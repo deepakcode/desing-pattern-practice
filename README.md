@@ -72,4 +72,7 @@ Behavioral Desing patterns
 Intent -> 
 It defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
 
+**2. Strategy desing pattern**
 
+Intent -> 
+It lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
