@@ -81,6 +81,8 @@ It lets you define a family of algorithms, put each of them into a separate clas
 3. Decorator desing pattern 
 	- Its combination of IS-A and HAS-A relationship
 	
+<img width="637" alt="Screenshot 2022-09-11 at 2 36 18 PM" src="https://user-images.githubusercontent.com/13814143/189519990-b052dfc1-7e1b-4536-b605-02450bd248ad.png">
+	
 ```java
 
 abstract class Beverage {
@@ -98,7 +100,7 @@ public abstract class BeverageDecorator extends Beverage{
     public abstract String getDescription();
 }
 
-<img width="637" alt="Screenshot 2022-09-11 at 2 36 18 PM" src="https://user-images.githubusercontent.com/13814143/189519990-b052dfc1-7e1b-4536-b605-02450bd248ad.png">
+
 
 
 public class Mocha extends BeverageDecorator{
