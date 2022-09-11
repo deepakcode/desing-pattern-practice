@@ -78,7 +78,7 @@ Intent ->
 It lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
 
 
-##Structural Desing pattern
+## Structural Desing pattern
 
 1. Decorator desing pattern 
 	- Its combination of IS-A and HAS-A relationship
