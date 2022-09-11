@@ -76,3 +76,60 @@ It defines the skeleton of an algorithm in the superclass but lets subclasses ov
 
 Intent -> 
 It lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
+
+
+3. Decorator desing pattern 
+	- Its combination of IS-A and HAS-A relationship
+	
+```java
+
+abstract class Beverage {
+
+    String description = "Beverage";
+
+    String getDescription() {
+        return description;
+    }
+
+    public abstract double cost();
+}
+
+public abstract class BeverageDecorator extends Beverage{
+    public abstract String getDescription();
+}
+
+<img width="637" alt="Screenshot 2022-09-11 at 2 36 18 PM" src="https://user-images.githubusercontent.com/13814143/189519990-b052dfc1-7e1b-4536-b605-02450bd248ad.png">
+
+
+public class Mocha extends BeverageDecorator{
+
+    Beverage beverage;
+
+    Mocha(Beverage beverage){
+        this.beverage=beverage;
+    }
+
+    @Override
+    public double cost() {
+        return beverage.cost()+0.5;
+    }
+
+    @Override
+    public String getDescription() {
+        return beverage.getDescription()+" Mocha";
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        Beverage mochaExpresso = new Mocha(new Espresso());
+        System.out.println(mochaExpresso.getDescription());
+        System.out.println(mochaExpresso.cost());
+        
+    }
+}
+
+
+```
